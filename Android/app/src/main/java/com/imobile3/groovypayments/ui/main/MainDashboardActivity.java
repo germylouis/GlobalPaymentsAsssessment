@@ -105,9 +105,9 @@ public class MainDashboardActivity extends BaseActivity {
 
             case Placeholder2:
                 new AlertDialog.Builder(this)
-                        .setTitle("Under Construction")
-                        .setMessage("This area of the application is still under construction.")
-                        .setNegativeButton("ACKNOWLEDGED", null)
+                        .setTitle(R.string.common_under_construction)
+                        .setMessage(R.string.under_construction_alert_message)
+                        .setNegativeButton(R.string.common_acknowledged, null)
                         .setIcon(android.R.drawable.ic_dialog_alert)
                         .show();
         }
