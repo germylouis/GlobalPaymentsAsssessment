@@ -1,5 +1,7 @@
 package com.imobile3.groovypayments.ui.main;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -102,7 +104,12 @@ public class MainDashboardActivity extends BaseActivity {
                 break;
 
             case Placeholder2:
-                throw new RuntimeException("User clicked a Placeholder button");
+                new AlertDialog.Builder(this)
+                        .setTitle("Under Construction")
+                        .setMessage("This area of the application is still under construction.")
+                        .setNegativeButton("ACKNOWLEDGED", null)
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
         }
     }
 
