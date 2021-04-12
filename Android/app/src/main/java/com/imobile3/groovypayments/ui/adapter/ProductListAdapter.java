@@ -1,12 +1,16 @@
 package com.imobile3.groovypayments.ui.adapter;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.imobile3.groovypayments.R;
+import com.imobile3.groovypayments.data.enums.GroovyIcon;
 import com.imobile3.groovypayments.data.model.Product;
 import com.imobile3.groovypayments.utils.StateListHelper;
 
@@ -22,6 +26,7 @@ import java.util.List;
 public class ProductListAdapter
         extends RecyclerView.Adapter<ProductListAdapter.ViewHolder> {
 
+    private static final String TAG = "ProductListAdapter";
     private Context mContext;
     private AdapterCallback mCallbacks;
     private List<Product> mItems;
@@ -55,6 +60,15 @@ public class ProductListAdapter
         holder.label.setText(item.getName());
         holder.label.setTextColor(
                 StateListHelper.getTextColorSelector(mContext, R.color.black_space));
+        holder.icon.setImageResource(GroovyIcon.fromId(item.getIconId()).drawableRes);
+        holder.price.setText("$" + Long.toString(item.getUnitPrice()));
+        holder.price.setTextColor(
+                StateListHelper.getTextColorSelector(mContext, R.color.gray_be));
+        holder.description.setText(!item.getNote().isEmpty() ? item.getNote() : mContext.getResources().getString(R.string.order_entry_no_description));
+        Log.d(TAG, "onBindViewHolder: " + item.getName() + " - " + item.getNote());
+        holder.description.setTextColor(
+                StateListHelper.getTextColorSelector(mContext, R.color.gray_be));
+
     }
 
     @Override
@@ -65,11 +79,17 @@ public class ProductListAdapter
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ViewGroup container;
         TextView label;
+        TextView price;
+        TextView description;
+        ImageView icon;
 
         ViewHolder(View itemView) {
             super(itemView);
             container = itemView.findViewById(R.id.container);
             label = itemView.findViewById(R.id.label);
+            icon = itemView.findViewById(R.id.icon);
+            price = itemView.findViewById(R.id.price);
+            description = itemView.findViewById(R.id.description);
             container.setOnClickListener(this);
         }
 

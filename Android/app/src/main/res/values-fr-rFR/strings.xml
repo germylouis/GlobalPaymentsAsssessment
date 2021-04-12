@@ -91,7 +91,7 @@
     <!-- Order Entry -->
     <string name="order_entry_subtitle_checkout">Cliquez sur l\'icône en haut à droite pour passer à la caisse.</string>
     <string name="order_entry_subtitle">Ajoutez des produits à la commande.</string>
-
+    <string name="order_entry_no_description">Pas de description disponible.</string>
     <!-- Secret Functions -->
     <string name="secret_functions_alert_erase_cart">C\'est presque comme si votre panier n\'avait jamais existé&#8230;</string>
     <string name="secret_functions_alert_reset_database">La base de données de démonstration a été réinitialisée avec succès (toutes les données de démonstration originales ont été restaurées). Ce message s\'autodétruira.</string>

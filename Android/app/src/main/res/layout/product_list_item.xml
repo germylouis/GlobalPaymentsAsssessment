@@ -18,14 +18,17 @@
         android:paddingStart="@dimen/padding_medium"
         android:paddingEnd="@dimen/padding_medium">
 
-        <View
+        <ImageView
             android:id="@+id/icon"
             android:layout_width="@dimen/product_list_icon_size"
             android:layout_height="@dimen/product_list_icon_size"
             android:layout_gravity="center_vertical"
-            android:padding="@dimen/product_list_icon_padding" />
+            android:padding="@dimen/product_list_icon_padding"
+            android:background="#100F0F"
 
-        <LinearLayout
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
@@ -37,9 +40,61 @@
                 style="@style/TextView.Label.Bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:text="BBQ Bacon Cheeseburger"
                 tools:textColor="@color/red_cinnabar" />
-        </LinearLayout>
+
+            <TextView
+                android:id="@+id/price"
+                style="@style/TextView.Label.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label"
+                tools:text="$99.99" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="1dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="4dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/price"
+                app:layout_constraintTop_toBottomOf="@id/label" />
+
+            <TextView
+                android:id="@+id/description"
+                style="@style/TextView.Label.Bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/divider"
+                app:layout_constraintTop_toBottomOf="@id/label"
+                tools:text="Very cheesy stuff right here." />
+
+            <ImageView
+                android:id="@+id/border_amber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:srcCompat="@drawable/grid_item_border_orange"
+                tools:layout_editor_absoluteX="-76dp"
+                tools:layout_editor_absoluteY="-5dp"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
     <FrameLayout
@@ -54,12 +109,5 @@
             app:srcCompat="@drawable/grid_item_border_red"
             tools:visibility="visible" />
 
-        <ImageView
-            android:id="@+id/border_amber"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-            app:srcCompat="@drawable/grid_item_border_orange"
-            tools:visibility="visible" />
     </FrameLayout>
 </androidx.cardview.widget.CardView>

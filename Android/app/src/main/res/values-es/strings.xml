@@ -73,6 +73,7 @@
     <string name="order_entry_subtitle">Añadir productos al pedido.</string>
     <string name="order_entry_subtitle_checkout">Haga clic en el icono superior derecho para
         finalizar la compra.</string>
+    <string name="order_entry_no_description">No hay descripción disponible.</string>
 
     <!-- Order History -->
     <string name="order_history_subtitle">Pedidos recientes listados a continuación.</string>

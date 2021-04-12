@@ -68,6 +68,7 @@
     <!-- Order Entry -->
     <string name="order_entry_subtitle">Add products to the order.</string>
     <string name="order_entry_subtitle_checkout">Click the top-right icon to checkout.</string>
+    <string name="order_entry_no_description">No description available.</string>
 
     <!-- Order History -->
     <string name="order_history_subtitle">Recent orders listed below.</string>
