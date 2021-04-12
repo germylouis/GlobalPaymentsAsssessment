@@ -104,12 +104,10 @@ public class MainDashboardActivity extends BaseActivity {
                 break;
 
             case Placeholder2:
-                new AlertDialog.Builder(this)
-                        .setTitle(R.string.common_under_construction)
-                        .setMessage(R.string.under_construction_alert_message)
-                        .setNegativeButton(R.string.common_acknowledged, null)
-                        .setIcon(android.R.drawable.ic_dialog_alert)
-                        .show();
+                showAlertDialog(
+                        R.string.common_under_construction,
+                        R.string.under_construction_alert_message,
+                        R.string.common_acknowledged);
         }
     }
 
