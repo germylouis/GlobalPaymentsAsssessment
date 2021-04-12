@@ -74,6 +74,8 @@
     <string name="order_entry_subtitle_checkout">Haga clic en el icono superior derecho para
         finalizar la compra.</string>
     <string name="order_entry_no_description">No hay descripción disponible.</string>
+    <string name="order_entry_add_items_to_cart_title">Añade artículos al carrito.</string>
+    <string name="order_entry_add_items_to_cart_message">Debe agregar al menos 1 artículo a su carrito antes de pagar.</string>
 
     <!-- Order History -->
     <string name="order_history_subtitle">Pedidos recientes listados a continuación.</string>

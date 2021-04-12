@@ -69,7 +69,8 @@
     <string name="order_entry_subtitle">Add products to the order.</string>
     <string name="order_entry_subtitle_checkout">Click the top-right icon to checkout.</string>
     <string name="order_entry_no_description">No description available.</string>
-
+    <string name="order_entry_add_items_to_cart_title">Add Items To Cart.</string>
+    <string name="order_entry_add_items_to_cart_message">You need to add at least 1 item to your cart before checking out.</string>
     <!-- Order History -->
     <string name="order_history_subtitle">Recent orders listed below.</string>
     <string name="order_history_alert_title">Not Implemented</string>

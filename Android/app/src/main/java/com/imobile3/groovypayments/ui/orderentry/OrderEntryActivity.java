@@ -105,7 +105,14 @@ public class OrderEntryActivity extends BaseActivity {
     }
 
     private void handleCheckoutClick() {
-        // TODO: Check whether the order total is $0.00.
-        startActivity(new Intent(this, CheckoutActivity.class));
+        if ("$0.00".equals(CartManager.getInstance()
+                .getFormattedGrandTotal(Locale.getDefault()))) {
+            showAlertDialog(
+                    R.string.order_entry_add_items_to_cart_title,
+                    R.string.order_entry_add_items_to_cart_message,
+                    R.string.common_acknowledged);
+        } else {
+            startActivity(new Intent(this, CheckoutActivity.class));
+        }
     }
 }
