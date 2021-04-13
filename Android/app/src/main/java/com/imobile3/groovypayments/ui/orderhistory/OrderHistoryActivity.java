@@ -39,6 +39,7 @@ public class OrderHistoryActivity extends BaseActivity {
         mCartListRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // TODO: Load order history (Cart data models) from the database
+        loadHistory();
     }
 
     @Override
@@ -66,6 +67,9 @@ public class OrderHistoryActivity extends BaseActivity {
         return mViewModel;
     }
 
+    private void loadHistory() {
+        // TODO: 4/12/2021 Load History, first figure out what to observe in VM 
+    }
     private void handleCartClick(@NonNull Cart cart) {
         // TODO: Do something with the cart
         getViewModel().addCartClick();

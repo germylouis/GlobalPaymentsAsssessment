@@ -297,12 +297,7 @@ public class CheckoutActivity extends BaseActivity {
         mLblCreditAmount.setText(formattedGrandTotal);
     }
 
-    private void handlePayWithCashClick() {
-        showAlertDialog(
-                R.string.common_under_construction,
-                R.string.under_construction_alert_message,
-                R.string.common_acknowledged);
-    }
+    private void handlePayWithCashClick() { startActivity(new Intent(this, CheckoutCompleteActivity.class)); }
 
     //region (Animated) View Transitions
 
